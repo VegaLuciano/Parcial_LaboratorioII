@@ -6,17 +6,26 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal enum Protagonistas
+    public enum TipoMusica
     {
-        Kayle,
-        MetalSlug,
-        Sasuke,
+        Kpop,
+        HeavyMetal,
+        HardRock,
+        Rock,
+        Pop,
+        RockAlternativo,
+        Regueton,
+        Trap,
+        Cumbia,
+        RKT,
     }
 
-    internal enum Habilidades
-    { 
-        Curar,
-        GolpeDoble,
-        SerInvisible,
+    public enum TipoInstrumento
+    {
+        Cuerda,
+        Viento,
+        Percusión,
+        idofonos,
+        electrofonos
     }
 }
