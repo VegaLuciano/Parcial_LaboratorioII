@@ -16,8 +16,9 @@ namespace Entidades
         RockAlternativo,
         Regueton,
         Trap,
+        Cuarteto,
+        Independiente,
         Cumbia,
-        RKT,
     }
 
     public enum TipoInstrumento
@@ -25,7 +26,5 @@ namespace Entidades
         Cuerda,
         Viento,
         Percusión,
-        idofonos,
-        electrofonos
     }
 }

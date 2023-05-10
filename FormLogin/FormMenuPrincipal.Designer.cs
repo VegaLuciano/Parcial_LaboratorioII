@@ -67,6 +67,7 @@
             btnVerStock.TabIndex = 2;
             btnVerStock.Text = "Ver stock";
             btnVerStock.UseVisualStyleBackColor = true;
+            btnVerStock.Click += btnVerStock_Click;
             // 
             // btnHistorial
             // 

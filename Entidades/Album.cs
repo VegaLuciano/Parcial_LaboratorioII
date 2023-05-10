@@ -68,7 +68,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"{this.autor}");
             sb.AppendLine($"Nombre del albúm: {this.nombreDelAlbum}");
-            sb.AppendLine($"Tipo: {this.tipoMusica}");
+            sb.AppendLine($"Tipo: {this.tipoMusica.ToString()}");
             sb.AppendLine($"Año de slaida {this.añoDeSalida}");
             sb.AppendLine(base.ToString());
 
