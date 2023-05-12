@@ -49,6 +49,7 @@
             btnVenta.TabIndex = 0;
             btnVenta.Text = "Realizar Venta";
             btnVenta.UseVisualStyleBackColor = true;
+            btnVenta.Click += btnVenta_Click;
             // 
             // button1
             // 

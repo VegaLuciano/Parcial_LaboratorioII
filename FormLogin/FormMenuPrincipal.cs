@@ -28,7 +28,6 @@ namespace FormLogin
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
-
             lblFecha.Text = DateTime.Now.ToLongDateString();
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss");
         }
@@ -40,6 +39,14 @@ namespace FormLogin
 
         private void btnVerStock_Click(object sender, EventArgs e)
         {
+            FormVerStock FormVerStock = new FormVerStock();
+            FormVerStock.Show();
+        }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            FormVenta formVenta = new FormVenta();  
+            formVenta.Show();
             
         }
     }
