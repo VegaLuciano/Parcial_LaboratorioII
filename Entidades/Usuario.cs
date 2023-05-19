@@ -65,7 +65,6 @@ namespace Entidades
                     instrumento.Precio = instrumento.Precio * 0.75;
                     retornoCliente = clienteCompra;
                 }
-
                 instrumento.Stock--;
             }
 
@@ -86,9 +85,7 @@ namespace Entidades
 
                 instrumento.Stock -= cantidadProductos;
             }
-
             return retornoCliente;
-
         }
     }
 }

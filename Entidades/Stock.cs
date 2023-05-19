@@ -54,11 +54,12 @@ namespace Entidades
             stockAlbums.Add("michaelJackson", michaelJackson);
             stockAlbums.Add("badBunny", badBunny);
             stockAlbums.Add("cuarteto", cuarteto);
+            stockAlbums.Add("cumbia", cumbiaArgentina);
             stockAlbums.Add("independiente", independiente);
 
             return stockAlbums;
         }
-        public static List<List<Album>> CargarAlbumesStockLista()
+       /* public static List<List<Album>> CargarAlbumesStockLista()
         {
             List<List<Album>> stockAlbums = new List<List<Album>>();
             CargarAlbumes();
@@ -73,10 +74,9 @@ namespace Entidades
             stockAlbums.Add(badBunny);
             stockAlbums.Add(cuarteto);
             stockAlbums.Add(independiente);
-
             return stockAlbums;
         }
-
+       */
 
         public static void CargarAlbumes()
         {
@@ -86,9 +86,9 @@ namespace Entidades
             GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", TipoMusica.HardRock, 2014, "Appetite for Democracy 3D"));
             GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", TipoMusica.HardRock, 2008, "Chinese Democracy"));
 
-            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2017, "Chinese Democracy"));
+            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2022, "Celebrate"));
             TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2023, "Ready to Be"));
-            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2023, "Ready to Be"));
+            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2022, "Eyes Wide Open"));
 
             Ysya.Add(new Album(3500.00, false, 10, "ysy a", TipoMusica.Trap, 2018, "Antezana"));
             Ysya.Add(new Album(2000.00, false, 10, "ysy a", TipoMusica.Trap, 2023, "Ysysmo"));

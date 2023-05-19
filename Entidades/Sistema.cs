@@ -13,17 +13,17 @@ namespace Entidades
     {
         private static List<Usuario> listaUsuarios = new List<Usuario>();
         private static Dictionary<string, List<Album>> albumesStockDic = new Dictionary<string, List<Album>>();
-        private static List<List<Album>> albumesStockList = new List<List<Album>>();
+       // private static List<List<Album>> albumesStockList = new List<List<Album>>();
 
         public static List<Usuario> ListaUsuarios { get => listaUsuarios; set => listaUsuarios = value; }
         public static Dictionary<string, List<Album>> AlbumesStockDic { get => albumesStockDic; set => albumesStockDic = value; }
-        public static List<List<Album>> AlbumesStockList { get => albumesStockList; set => albumesStockList = value; }
+        //public static List<List<Album>> AlbumesStockList { get => albumesStockList; set => albumesStockList = value; }
 
         static Sistema() 
         {
             CargarUsuarios();
             albumesStockDic = Stock.CargarAlbumesStockDiccionario();
-            albumesStockList = Stock.CargarAlbumesStockLista();
+            //albumesStockList = Stock.CargarAlbumesStockLista();
         }
 
 

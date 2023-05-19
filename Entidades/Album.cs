@@ -21,7 +21,7 @@ namespace Entidades
             this.añoDeSalida = añoDeSalida;
             this.nombreDelAlbum = nombreDelAlbum;
         }
-        public Album(double precio, bool estaEnOferta, int stock, string? autor, TipoMusica tipoMusica, int añoDeSalida, string? nombreDelAlbum, DateTime fechaDeVenta, Cliente? comprador ) : this(precio, estaEnOferta, stock, autor, tipoMusica, añoDeSalida, nombreDelAlbum)
+        public Album(double precio, bool estaEnOferta, int stock, string autor, TipoMusica tipoMusica, int añoDeSalida, string? nombreDelAlbum, DateTime fechaDeVenta, Cliente? comprador ) : this(precio, estaEnOferta, stock, autor, tipoMusica, añoDeSalida, nombreDelAlbum)
         {
             this.fechaDeVenta = fechaDeVenta;
             this.comprador = comprador;
@@ -30,12 +30,12 @@ namespace Entidades
         public double Precio { get => precio; set => precio = value; }
         public bool EstaEnOferta { get => estaEnOferta; set => estaEnOferta = value; }
         public int Stock { get => stock; set => stock = value; }
-        public string? Autor { get => autor; set => autor = value; }
-        public string? NombreDelAlbum { get => nombreDelAlbum; set => nombreDelAlbum = value; }
+        public string Autor { get => autor; set => autor = value; }
+        public string NombreDelAlbum { get => nombreDelAlbum; set => nombreDelAlbum = value; }
         public int AñoDeSalida { get => añoDeSalida; set => añoDeSalida = value; }
         public TipoMusica TipoMusica { get => tipoMusica; set => tipoMusica = value; }
         public DateTime FechaDeVenta { get => fechaDeVenta; set => fechaDeVenta = value; }
-        public Cliente? Comprador { get => comprador; set => comprador = value; }
+        public Cliente Comprador { get => comprador; set => comprador = value; }
 
 
         public override bool PreguntarOferta()
@@ -66,11 +66,12 @@ namespace Entidades
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
+
             sb.AppendLine($"{this.autor}");
             sb.AppendLine($"Nombre del albúm: {this.nombreDelAlbum}");
-            sb.AppendLine($"Tipo: {this.tipoMusica.ToString()}");
+            sb.AppendLine($"Tipo: {this.tipoMusica}");
             sb.AppendLine($"Año de slaida {this.añoDeSalida}");
-            sb.AppendLine(base.ToString());
+            //sb.AppendLine(base.ToString());
 
             return sb.ToString();
         }

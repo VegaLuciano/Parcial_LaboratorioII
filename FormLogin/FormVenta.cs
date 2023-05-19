@@ -58,24 +58,24 @@ namespace FormLogin
             {
                 Dictionary<string, List<Album>> albumes = Stock.CargarAlbumesStockDiccionario();
 
-                List<Album> listAlbum = new List<Album>();
-
                 if (albumes.ContainsKey(txtBuscador.Text))
                 {
-                    listAlbum = albumes[txtBuscador.Text];
-
-                    foreach (Album album in listAlbum)
-                    {
-                        dtgAlbum.DataSource = album;
-                    }
+                    List<Album> listAlbum = albumes[txtBuscador.Text];
+                    dtgAlbum.DataSource = listAlbum;
                 }
                 else
                 {
+                    MessageBox.Show(txtBuscador.Text);
                     txtBuscador.Text = "si se puede";
                 }
+
             }
         }
 
+        private void txtBuscador_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

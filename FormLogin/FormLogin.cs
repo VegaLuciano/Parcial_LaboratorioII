@@ -73,7 +73,7 @@ namespace FormLogin
 
         private void txtUsuario_Click(object sender, EventArgs e)
         {
-            txtUsuario.SelectAll();
+            txtUsuario.SelectAll(); 
         }
 
         private void txtContraseña_Click(object sender, EventArgs e)

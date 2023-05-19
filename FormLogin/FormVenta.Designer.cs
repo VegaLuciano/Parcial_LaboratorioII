@@ -41,7 +41,7 @@
             // ckbAlbum
             // 
             ckbAlbum.AutoSize = true;
-            ckbAlbum.Location = new Point(389, 93);
+            ckbAlbum.Location = new Point(408, 78);
             ckbAlbum.Name = "ckbAlbum";
             ckbAlbum.Size = new Size(62, 19);
             ckbAlbum.TabIndex = 0;
@@ -81,23 +81,25 @@
             // 
             // txtBuscador
             // 
-            txtBuscador.Location = new Point(484, 91);
+            txtBuscador.Location = new Point(504, 126);
             txtBuscador.Name = "txtBuscador";
             txtBuscador.Size = new Size(119, 23);
             txtBuscador.TabIndex = 6;
+            txtBuscador.TextChanged += txtBuscador_TextChanged;
             // 
             // dtgAlbum
             // 
             dtgAlbum.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgAlbum.Location = new Point(389, 151);
+            dtgAlbum.Location = new Point(334, 155);
             dtgAlbum.Name = "dtgAlbum";
+            dtgAlbum.ReadOnly = true;
             dtgAlbum.RowTemplate.Height = 25;
-            dtgAlbum.Size = new Size(368, 123);
+            dtgAlbum.Size = new Size(530, 283);
             dtgAlbum.TabIndex = 7;
             // 
             // btnBuscarAlbum
             // 
-            btnBuscarAlbum.Location = new Point(645, 93);
+            btnBuscarAlbum.Location = new Point(683, 118);
             btnBuscarAlbum.Name = "btnBuscarAlbum";
             btnBuscarAlbum.Size = new Size(75, 23);
             btnBuscarAlbum.TabIndex = 8;
@@ -109,7 +111,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(900, 450);
             Controls.Add(btnBuscarAlbum);
             Controls.Add(dtgAlbum);
             Controls.Add(txtBuscador);
