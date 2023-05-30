@@ -25,8 +25,7 @@ namespace Entidades
         public abstract bool PreguntarOferta();
 
         public abstract bool ReclamarGarantia();
-   
-
+  
 
         public virtual string Mostrar() 
         {
@@ -45,7 +44,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return Mostrar();
+            return this.Mostrar();
         }
 
     }

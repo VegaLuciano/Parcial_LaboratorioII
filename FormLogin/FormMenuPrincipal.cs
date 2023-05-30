@@ -13,12 +13,18 @@ namespace FormLogin
 {
     public partial class FormMenuPrincipal : Form
     {
-        private Usuario? usuario;
+        private Usuario usuario;
+        public Dictionary<string, List<Album>> albumesStockDic = new Dictionary<string, List<Album>>();
+        public List<List<Album>> albumesStockList = new List<List<Album>>();
+        public List<Instrumento> instrumentosStock = new List<Instrumento>();
 
         public FormMenuPrincipal(Usuario usuario)
         {
             InitializeComponent();
             this.usuario = usuario;
+            albumesStockDic = Sistema.AlbumesStockDic;
+            albumesStockList = Sistema.AlbumesStockList;
+            instrumentosStock = Sistema.InstrumentosStock;
         }
 
         private void btnCerrarSecion_Click(object sender, EventArgs e)
@@ -39,7 +45,7 @@ namespace FormLogin
 
         private void btnVerStock_Click(object sender, EventArgs e)
         {
-            FormVerStock FormVerStock = new FormVerStock();
+            FormVerStock FormVerStock = new FormVerStock(albumesStockDic, albumesStockList, instrumentosStock, usuario);
             FormVerStock.Show();
         }
 
@@ -47,7 +53,7 @@ namespace FormLogin
         {
             FormVenta formVenta = new FormVenta();  
             formVenta.Show();
-            
+          
         }
     }
 }

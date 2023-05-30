@@ -13,16 +13,15 @@ namespace Entidades
         private TipoInstrumento tipoInstrumento;
         private int garantia;
 
-
-        public Instrumento(double precio, bool estaEnOferta, int stock, int garantia, string nombre, TipoInstrumento tipo) : base(precio, estaEnOferta, stock)
+        public Instrumento(double precio, bool estaEnOferta, int stock, int garantia, string nombre, int tipo) : base(precio, estaEnOferta, stock)
         {
             this.garantia = garantia;
-            this.tipoInstrumento = tipo;
+            seleccionarTipoInstrumento(tipo);
             this.nombre = nombre;
             this.comprador = null;
         }
 
-        public Instrumento(double precio, bool estaEnOferta, int stock, int garantia, string nombre, TipoInstrumento tipo, DateTime fechaDeVenta, Cliente comprador) : this(precio, estaEnOferta, stock, garantia, nombre, tipo)
+        public Instrumento(double precio, bool estaEnOferta, int stock, int garantia, string nombre, int tipo, DateTime fechaDeVenta, Cliente comprador) : this(precio, estaEnOferta, stock, garantia, nombre, tipo)
         {
             this.FechaDeVenta = fechaDeVenta;
             this.Comprador = comprador;
@@ -34,8 +33,8 @@ namespace Entidades
         public string Nombre { get => nombre; set => nombre = value; }
         public int Garantia { get => garantia; set => garantia = value; }
         public DateTime FechaDeVenta { get => fechaDeVenta; set => fechaDeVenta = value; }
-        public Cliente? Comprador { get => comprador; set => comprador = value; }
-        internal TipoInstrumento TipoInstrumento { get => tipoInstrumento; set => tipoInstrumento = value; }
+        public Cliente Comprador { get => comprador; set => comprador = value; }
+        public TipoInstrumento TipoInstrumento { get => tipoInstrumento; set => tipoInstrumento = value; }
 
 
         public override bool PreguntarOferta() 
@@ -66,17 +65,17 @@ namespace Entidades
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"{this.nombre}");
+            sb.AppendLine($"Nombre: {this.nombre}");
             sb.AppendLine($"Tipo: {this.tipoInstrumento}");
             sb.AppendLine($"Garantia: {this.garantia}");
-            sb.AppendLine(base.ToString());
+            sb.AppendLine(base.Mostrar());
 
             return sb.ToString();
         }
 
         public string MostrarVenta()
         {
-            string? retorno = "";
+            string retorno = "";
             if (!(this.Comprador == null)) 
             {
                 StringBuilder sb = new StringBuilder();
@@ -86,6 +85,22 @@ namespace Entidades
             }
 
             return retorno;
+        }
+
+        private void seleccionarTipoInstrumento(int tipo)
+        {
+            switch (tipo)
+            {
+                case 0:
+                    this.tipoInstrumento = TipoInstrumento.Cuerda;
+                    break;
+                case 1:
+                    this.tipoInstrumento = TipoInstrumento.Viento;
+                    break;
+                case 2:
+                    this.tipoInstrumento = TipoInstrumento.Percusión;
+                    break;
+            }
         }
     }
 }

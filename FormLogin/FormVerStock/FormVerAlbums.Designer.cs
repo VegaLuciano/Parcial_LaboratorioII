@@ -1,6 +1,6 @@
 ﻿namespace FormLogin
 {
-    partial class FormVerStock
+    partial class FormVerAlbums
     {
         /// <summary>
         /// Required designer variable.
@@ -33,16 +33,16 @@
             albumBindingSource = new BindingSource(components);
             albumBindingSource2 = new BindingSource(components);
             dtgAlbum = new DataGridView();
-            albumBindingSource3 = new BindingSource(components);
+            autorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             nombreDelAlbumDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             precioDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            estaEnOfertaDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             stockDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            autorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             añoDeSalidaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             tipoMusicaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            estaEnOfertaDataGridViewCheckBoxColumn = new DataGridViewCheckBoxColumn();
             fechaDeVentaDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             compradorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            albumBindingSource3 = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)albumBindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)albumBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)albumBindingSource2).BeginInit();
@@ -64,19 +64,32 @@
             // 
             // dtgAlbum
             // 
+            dtgAlbum.AllowUserToAddRows = false;
+            dtgAlbum.AllowUserToDeleteRows = false;
+            dtgAlbum.AllowUserToResizeColumns = false;
+            dtgAlbum.AllowUserToResizeRows = false;
             dtgAlbum.AutoGenerateColumns = false;
+            dtgAlbum.BackgroundColor = Color.FromArgb(30, 30, 30);
             dtgAlbum.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgAlbum.Columns.AddRange(new DataGridViewColumn[] { nombreDelAlbumDataGridViewTextBoxColumn, precioDataGridViewTextBoxColumn, estaEnOfertaDataGridViewCheckBoxColumn, stockDataGridViewTextBoxColumn, autorDataGridViewTextBoxColumn, añoDeSalidaDataGridViewTextBoxColumn, tipoMusicaDataGridViewTextBoxColumn, fechaDeVentaDataGridViewTextBoxColumn, compradorDataGridViewTextBoxColumn });
+            dtgAlbum.Columns.AddRange(new DataGridViewColumn[] { autorDataGridViewTextBoxColumn, nombreDelAlbumDataGridViewTextBoxColumn, precioDataGridViewTextBoxColumn, stockDataGridViewTextBoxColumn, añoDeSalidaDataGridViewTextBoxColumn, tipoMusicaDataGridViewTextBoxColumn, estaEnOfertaDataGridViewCheckBoxColumn, fechaDeVentaDataGridViewTextBoxColumn, compradorDataGridViewTextBoxColumn });
             dtgAlbum.DataSource = albumBindingSource3;
-            dtgAlbum.Location = new Point(63, 22);
+            dtgAlbum.Dock = DockStyle.Fill;
+            dtgAlbum.Location = new Point(0, 0);
+            dtgAlbum.MultiSelect = false;
             dtgAlbum.Name = "dtgAlbum";
+            dtgAlbum.ReadOnly = true;
             dtgAlbum.RowTemplate.Height = 25;
-            dtgAlbum.Size = new Size(613, 320);
+            dtgAlbum.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dtgAlbum.Size = new Size(784, 420);
             dtgAlbum.TabIndex = 0;
             // 
-            // albumBindingSource3
+            // autorDataGridViewTextBoxColumn
             // 
-            albumBindingSource3.DataSource = typeof(Entidades.Album);
+            autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
+            autorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            autorDataGridViewTextBoxColumn.ReadOnly = true;
+            autorDataGridViewTextBoxColumn.Width = 150;
             // 
             // nombreDelAlbumDataGridViewTextBoxColumn
             // 
@@ -84,6 +97,7 @@
             nombreDelAlbumDataGridViewTextBoxColumn.HeaderText = "Nombre";
             nombreDelAlbumDataGridViewTextBoxColumn.Name = "nombreDelAlbumDataGridViewTextBoxColumn";
             nombreDelAlbumDataGridViewTextBoxColumn.ReadOnly = true;
+            nombreDelAlbumDataGridViewTextBoxColumn.Width = 180;
             // 
             // precioDataGridViewTextBoxColumn
             // 
@@ -91,15 +105,7 @@
             precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             precioDataGridViewTextBoxColumn.ReadOnly = true;
-            precioDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // estaEnOfertaDataGridViewCheckBoxColumn
-            // 
-            estaEnOfertaDataGridViewCheckBoxColumn.DataPropertyName = "EstaEnOferta";
-            estaEnOfertaDataGridViewCheckBoxColumn.HeaderText = "EstaEnOferta";
-            estaEnOfertaDataGridViewCheckBoxColumn.Name = "estaEnOfertaDataGridViewCheckBoxColumn";
-            estaEnOfertaDataGridViewCheckBoxColumn.ReadOnly = true;
-            estaEnOfertaDataGridViewCheckBoxColumn.Visible = false;
+            precioDataGridViewTextBoxColumn.Width = 80;
             // 
             // stockDataGridViewTextBoxColumn
             // 
@@ -108,13 +114,6 @@
             stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
             stockDataGridViewTextBoxColumn.ReadOnly = true;
             stockDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
-            autorDataGridViewTextBoxColumn.HeaderText = "Autor";
-            autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            autorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // añoDeSalidaDataGridViewTextBoxColumn
             // 
@@ -129,7 +128,16 @@
             tipoMusicaDataGridViewTextBoxColumn.HeaderText = "Tipo de musica";
             tipoMusicaDataGridViewTextBoxColumn.Name = "tipoMusicaDataGridViewTextBoxColumn";
             tipoMusicaDataGridViewTextBoxColumn.ReadOnly = true;
-            tipoMusicaDataGridViewTextBoxColumn.Width = 120;
+            tipoMusicaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // estaEnOfertaDataGridViewCheckBoxColumn
+            // 
+            estaEnOfertaDataGridViewCheckBoxColumn.DataPropertyName = "EstaEnOferta";
+            estaEnOfertaDataGridViewCheckBoxColumn.HeaderText = "EstaEnOferta";
+            estaEnOfertaDataGridViewCheckBoxColumn.Name = "estaEnOfertaDataGridViewCheckBoxColumn";
+            estaEnOfertaDataGridViewCheckBoxColumn.ReadOnly = true;
+            estaEnOfertaDataGridViewCheckBoxColumn.Visible = false;
+            estaEnOfertaDataGridViewCheckBoxColumn.Width = 80;
             // 
             // fechaDeVentaDataGridViewTextBoxColumn
             // 
@@ -147,14 +155,18 @@
             compradorDataGridViewTextBoxColumn.ReadOnly = true;
             compradorDataGridViewTextBoxColumn.Visible = false;
             // 
-            // FormVerStock
+            // albumBindingSource3
+            // 
+            albumBindingSource3.DataSource = typeof(Entidades.Album);
+            // 
+            // FormVerAlbums
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(790, 438);
+            ClientSize = new Size(784, 420);
             Controls.Add(dtgAlbum);
-            Name = "FormVerStock";
-            Text = "FormVerStock";
+            Name = "FormVerAlbums";
+            Text = "Albums";
             Load += FormVerStock_Load;
             ((System.ComponentModel.ISupportInitialize)albumBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)albumBindingSource).EndInit();
@@ -169,15 +181,15 @@
         private BindingSource albumBindingSource1;
         private BindingSource albumBindingSource2;
         private DataGridView dtgAlbum;
+        private BindingSource albumBindingSource3;
+        private DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nombreDelAlbumDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
-        private DataGridViewCheckBoxColumn estaEnOfertaDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn añoDeSalidaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn tipoMusicaDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxColumn estaEnOfertaDataGridViewCheckBoxColumn;
         private DataGridViewTextBoxColumn fechaDeVentaDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn compradorDataGridViewTextBoxColumn;
-        private BindingSource albumBindingSource3;
     }
 }

@@ -59,7 +59,7 @@ namespace Entidades
 
             return stockAlbums;
         }
-       /* public static List<List<Album>> CargarAlbumesStockLista()
+        public static List<List<Album>> CargarAlbumesStockLista()
         {
             List<List<Album>> stockAlbums = new List<List<Album>>();
             CargarAlbumes();
@@ -73,84 +73,86 @@ namespace Entidades
             stockAlbums.Add(michaelJackson);
             stockAlbums.Add(badBunny);
             stockAlbums.Add(cuarteto);
+            stockAlbums.Add(cumbiaArgentina);
             stockAlbums.Add(independiente);
             return stockAlbums;
         }
-       */
 
-        public static void CargarAlbumes()
+
+        private static void CargarAlbumes()
         {
-            GunsNRoses.Add(new Album(4000.00, false, 4, "Guns N' Roses", TipoMusica.HardRock, 1991, "Use your illusion I"));
-            GunsNRoses.Add(new Album(4000.00, false, 4, "Guns N' Roses", TipoMusica.HardRock, 1991, "Use your illusion II"));
-            GunsNRoses.Add(new Album(4500.00, false, 5, "Guns N' Roses", TipoMusica.HardRock, 1999, "Live Era: '87-'93"));
-            GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", TipoMusica.HardRock, 2014, "Appetite for Democracy 3D"));
-            GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", TipoMusica.HardRock, 2008, "Chinese Democracy"));
+            GunsNRoses.Add(new Album(4000.00, false, 4, "Guns N' Roses", 2, 1991, "Use your illusion I"));
+            GunsNRoses.Add(new Album(4000.00, false, 4, "Guns N' Roses", 2, 1991, "Use your illusion II"));
+            GunsNRoses.Add(new Album(4500.00, false, 5, "Guns N' Roses", 2, 1999, "Live Era: '87-'93"));
+            GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", 2, 2014, "Appetite for Democracy 3D"));
+            GunsNRoses.Add(new Album(3000.00, false, 5, "Guns N' Roses", 2, 2008, "Chinese Democracy"));
 
-            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2022, "Celebrate"));
-            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2023, "Ready to Be"));
-            TWICE.Add(new Album(2000.00, false, 5, "TWICE", TipoMusica.Kpop, 2022, "Eyes Wide Open"));
+            TWICE.Add(new Album(2000.00, false, 5, "TWICE", 0, 2022, "Celebrate"));
+            TWICE.Add(new Album(2000.00, false, 5, "TWICE", 0, 2023, "Ready to Be"));
+            TWICE.Add(new Album(2000.00, false, 5, "TWICE", 0, 2022, "Eyes Wide Open"));
 
-            Ysya.Add(new Album(3500.00, false, 10, "ysy a", TipoMusica.Trap, 2018, "Antezana"));
-            Ysya.Add(new Album(2000.00, false, 10, "ysy a", TipoMusica.Trap, 2023, "Ysysmo"));
+            Ysya.Add(new Album(3500.00, false, 10, "ysy a", 7, 2018, "Antezana"));
+            Ysya.Add(new Album(2000.00, false, 10, "ysy a", 7, 2023, "Ysysmo"));
 
-            Metallica.Add(new Album(1500.00, false, 10, "Metallica", TipoMusica.HeavyMetal, 1986, "Ride the Lightning"));
-            Metallica.Add(new Album(1500.00, false, 10, "Metallica", TipoMusica.HeavyMetal, 1991, "Master of Puppets"));
-            Metallica.Add(new Album(1500.00, false, 10, "Metallica", TipoMusica.HeavyMetal, 1984, "Metallica (Black Album)"));
+            Metallica.Add(new Album(1500.00, false, 10, "Metallica", 1, 1986, "Ride the Lightning"));
+            Metallica.Add(new Album(1500.00, false, 10, "Metallica", 1, 1991, "Master of Puppets"));
+            Metallica.Add(new Album(1500.00, false, 10, "Metallica", 1, 1984, "Metallica (Black Album)"));
 
-            Gorillaz.Add(new Album(5000.00, false, 10, "Gorillaz", TipoMusica.RockAlternativo, 2005, "Gorillaz"));
-            Gorillaz.Add(new Album(5000.00, false, 10, "Gorillaz", TipoMusica.RockAlternativo, 1984, "Plastic Beach"));
+            Gorillaz.Add(new Album(5000.00, false, 10, "Gorillaz", 5, 2005, "Gorillaz"));
+            Gorillaz.Add(new Album(5000.00, false, 10, "Gorillaz", 5, 1984, "Plastic Beach"));
 
-            Nirvana.Add(new Album(5000.00, false, 20, "Nirvana", TipoMusica.Rock, 1991, "Nervermind"));
-            Nirvana.Add(new Album(5000.00, false, 20, "Nirvana", TipoMusica.Rock, 1989, "Bleach"));
-            Nirvana.Add(new Album(6000.00, false, 20, "Nirvana", TipoMusica.Rock, 1994, "MTV Unplugged in New York"));
+            Nirvana.Add(new Album(5000.00, false, 20, "Nirvana", 3, 1991, "Nervermind"));
+            Nirvana.Add(new Album(5000.00, false, 20, "Nirvana", 3, 1989, "Bleach"));
+            Nirvana.Add(new Album(6000.00, false, 20, "Nirvana", 3, 1994, "MTV Unplugged in New York"));
 
-            TheWeekd.Add(new Album(5000.00, false, 20, "The Weeknd", TipoMusica.Pop, 1991, "Starboy"));
-            TheWeekd.Add(new Album(5000.00, false, 20, "The Weeknd", TipoMusica.Pop, 1989, "After Hours"));
-            
-            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", TipoMusica.Pop, 1982, "Thriller"));
-            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", TipoMusica.Pop, 2001, "Invincible"));
-            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", TipoMusica.Pop, 1987, "Bad"));
+            TheWeekd.Add(new Album(5000.00, false, 20, "The Weeknd", 4, 1991, "Starboy"));
+            TheWeekd.Add(new Album(5000.00, false, 20, "The Weeknd", 4, 1989, "After Hours"));
 
-            CumbiaArgentina.Add(new Album(2000.00, false, 3, "Mario Luis", TipoMusica.Cumbia, 1987, "Solo"));
-            CumbiaArgentina.Add(new Album(2000.00, false, 3, "Leo Mattioli", TipoMusica.Cumbia, 1987, "Lo mejor del Leon"));
+            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", 4, 1982, "Thriller"));
+            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", 4, 2001, "Invincible"));
+            MichaelJackson.Add(new Album(10000.00, false, 20, "Michael Jackson", 4, 1987, "Bad"));
 
-            BadBunny.Add(new Album(7000, false, 20, "Bad bunny", TipoMusica.Trap, 1987, "Un verano sin ti"));
-            BadBunny.Add(new Album(7000, false, 20, "Bad bunny", TipoMusica.Trap, 1987, "El ultimo tour del mundo"));
+            CumbiaArgentina.Add(new Album(2000.00, false, 3, "Mario Luis", 10, 1987, "Solo"));
+            CumbiaArgentina.Add(new Album(2000.00, false, 3, "Leo Mattioli", 10, 1987, "Lo mejor del Leon"));
 
-            Cuarteto.Add(new Album(7000, false, 5, "Rodrigo Bueno", TipoMusica.Cuarteto, 1999, "A 2000"));
-            Cuarteto.Add(new Album(7000, false, 5, "Walter Olmos", TipoMusica.Cuarteto, 2005, "Megamix"));
-            Cuarteto.Add(new Album(7000, false, 5, "Ulises Bueno", TipoMusica.Cuarteto, 2019, "En la piel"));
+            BadBunny.Add(new Album(7000, false, 20, "Bad bunny", 7, 1987, "Un verano sin ti"));
+            BadBunny.Add(new Album(7000, false, 20, "Bad bunny", 7, 1987, "El ultimo tour del mundo"));
 
-            Independiente.Add(new Album(7000, false, 9, "Artic Monkeys", TipoMusica.Independiente, 2013, "AM"));
-            Independiente.Add(new Album(7000, false, 9, "Artic Monkeys", TipoMusica.Independiente, 2007, "Favourite Worst Nightmare"));
-            Independiente.Add(new Album(7000, false, 20, "5 Seconds of summer", TipoMusica.Independiente, 2019, "YOUNGBLOOD"));
+            Cuarteto.Add(new Album(7000, false, 5, "Rodrigo Bueno", 8, 1999, "A 2000"));
+            Cuarteto.Add(new Album(7000, false, 5, "Walter Olmos", 8, 2005, "Megamix"));
+            Cuarteto.Add(new Album(7000, false, 5, "Ulises Bueno", 8, 2019, "En la piel"));
+
+            Independiente.Add(new Album(7000, false, 9, "Artic Monkeys", 9, 2013, "AM"));
+            Independiente.Add(new Album(7000, false, 9, "Artic Monkeys",9, 2007, "Favourite Worst Nightmare"));
+            Independiente.Add(new Album(7000, false, 20, "5 Seconds of summer", 9, 2019, "YOUNGBLOOD"));
         }
 
-        public static void CargarInstrumentosStock()
+        public static List<Instrumento> CargarInstrumentosStock()
         {
-            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Arpa", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(250000.00, false, 10, 2, "Contrabajo", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(200000.00, false, 15, 2, "Violín", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Bajo", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(1000000.00, false, 3, 2, "Piano", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(80000.00, false, 15, 2, "Teclado", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(100000.00, false, 10, 2, "Guitarra acústica", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(80000.00, false, 10, 2, "Guitarra eléctrica", TipoInstrumento.Cuerda));
-            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Guitarra MIDI", TipoInstrumento.Cuerda));
+            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Arpa", 0));
+            InstrumentosStock.Add(new Instrumento(250000.00, false, 10, 2, "Contrabajo", 0));
+            InstrumentosStock.Add(new Instrumento(200000.00, false, 15, 2, "Violín", 0));
+            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Bajo", 0));
+            InstrumentosStock.Add(new Instrumento(1000000.00, false, 3, 2, "Piano", 0));
+            InstrumentosStock.Add(new Instrumento(80000.00, false, 15, 2, "Teclado", 0));
+            InstrumentosStock.Add(new Instrumento(100000.00, false, 10, 2, "Guitarra acústica", 0));
+            InstrumentosStock.Add(new Instrumento(80000.00, false, 10, 2, "Guitarra eléctrica", 0));
+            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Guitarra MIDI", 0));
 
-            InstrumentosStock.Add(new Instrumento(50000.00, false, 10, 2, "Saxofón", TipoInstrumento.Viento));
-            InstrumentosStock.Add(new Instrumento(2000.00, false, 30, 2, "Flauta", TipoInstrumento.Viento));
-            InstrumentosStock.Add(new Instrumento(80000.00, false, 10, 2, "Tuba", TipoInstrumento.Viento));
-            InstrumentosStock.Add(new Instrumento(4000.00, false, 20, 2, "Armónica", TipoInstrumento.Viento));
-            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Acordeón", TipoInstrumento.Viento));
+            InstrumentosStock.Add(new Instrumento(50000.00, false, 10, 2, "Saxofón", 1));
+            InstrumentosStock.Add(new Instrumento(2000.00, false, 30, 2, "Flauta", 1));
+            InstrumentosStock.Add(new Instrumento(80000.00, false, 10, 2, "Tuba", 1));
+            InstrumentosStock.Add(new Instrumento(4000.00, false, 20, 2, "Armónica", 1));
+            InstrumentosStock.Add(new Instrumento(200000.00, false, 10, 2, "Acordeón", 1));
 
-            InstrumentosStock.Add(new Instrumento(20000.00, false, 10, 2, "Tambór", TipoInstrumento.Percusión));
-            InstrumentosStock.Add(new Instrumento(300000.00, false, 5, 2, "Bateria", TipoInstrumento.Percusión));
-            InstrumentosStock.Add(new Instrumento(250000.00, false, 5, 2, "Bateria Electronica", TipoInstrumento.Percusión));
-            InstrumentosStock.Add(new Instrumento(60000.00, false, 10, 2, "Bombo", TipoInstrumento.Percusión));
+            InstrumentosStock.Add(new Instrumento(20000.00, false, 10, 2, "Tambór", 2));
+            InstrumentosStock.Add(new Instrumento(300000.00, false, 5, 2, "Bateria", 2));
+            InstrumentosStock.Add(new Instrumento(250000.00, false, 5, 2, "Bateria Electronica", 2));
+            InstrumentosStock.Add(new Instrumento(60000.00, false, 10, 2, "Bombo", 2));
 
+            return InstrumentosStock;
         }
 
     }
-  
+
 }

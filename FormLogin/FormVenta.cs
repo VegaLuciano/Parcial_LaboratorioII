@@ -68,7 +68,6 @@ namespace FormLogin
                     MessageBox.Show(txtBuscador.Text);
                     txtBuscador.Text = "si se puede";
                 }
-
             }
         }
 

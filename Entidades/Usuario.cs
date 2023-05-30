@@ -54,9 +54,9 @@ namespace Entidades
             return this.nombreUser == nombreUser && this.contraseñaUser == contraseñaUser;
         }
 
-        public Cliente? VenderProducto(Instrumento instrumento, Cliente clienteCompra)
+        public Cliente VenderProducto(Instrumento instrumento, Cliente clienteCompra)
         {
-            Cliente? retornoCliente = null;
+            Cliente retornoCliente = null;
 
             if (instrumento.Stock > 1)
             {
@@ -71,9 +71,9 @@ namespace Entidades
             return retornoCliente;
 
         }
-        public Cliente? VenderProducto(Instrumento instrumento, int cantidadProductos, Cliente clienteCompra)
+        public Cliente VenderProducto(Instrumento instrumento, int cantidadProductos, Cliente clienteCompra)
         {
-            Cliente? retornoCliente = null;
+            Cliente retornoCliente = null;
 
             if (instrumento.Stock > cantidadProductos + 1)
             {
